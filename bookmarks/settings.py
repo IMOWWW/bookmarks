@@ -50,6 +50,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+PASSWORD_HASHERS = [ 
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher', 
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher', 
+    'django.contrib.auth.hashers.Argon2PasswordHasher', 
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher', 
+    'django.contrib.auth.hashers.ScryptPasswordHasher',
+]
+
 ROOT_URLCONF = 'bookmarks.urls'
 
 TEMPLATES = [
@@ -118,6 +126,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -127,3 +138,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'dashboard' 
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
+
+
+# wkvl kkvd nmoz lfem
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com' 
+EMAIL_HOST_USER = 'imowww1234@gmail.com' 
+EMAIL_HOST_PASSWORD = 'яавчпролджэлорпавы' 
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
