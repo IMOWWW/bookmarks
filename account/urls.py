@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import user_login, dashboard, register
+from .views import user_login, dashboard, register, edit
 from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
 
 urlpatterns = [
@@ -17,6 +17,8 @@ urlpatterns = [
     path('password-reset/complete/', PasswordResetCompleteView.as_view(), name='password_reset_complete'),  
 
     path('register/', register, name='register'),
+    path('edit/', edit, name='edit'),
+    
 ]
 
 
