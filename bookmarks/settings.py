@@ -171,3 +171,9 @@ EMAIL_USE_TLS = True
 SOCIAL_AUTH_GITHUB_KEY = ''
 SOCIAL_AUTH_GITHUB_SECRET = ''
 SOCIAL_AUTH_GITHUB_SCOPE = ['email']
+
+
+# if DEBUG:
+#     import mimetypes 
+#     mimetypes.add_type('application/javascript', '.js', True) 
+#     mimetypes.add_type('text/css', '.css', True)
